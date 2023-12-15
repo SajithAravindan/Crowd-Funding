@@ -1,4 +1,4 @@
-# new-hampshire-crowdfunding
+# New Hampshire Crowd Funding
 
 ## Description
 
@@ -63,6 +63,8 @@ To install this project locally:
 - Screenshots of the application:
 ![image](./client/src/assets/demo.png)
 ![image](./client/src/assets/demo1.png)
+
+
 
 - Link to the deployed application:
 https://boiling-everglades-43085-8252d97053b3.herokuapp.com/
