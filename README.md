@@ -58,7 +58,7 @@ To install this project locally:
 * Invoke application with `npm run develop`
 
 
-## Usage
+## Demo
 
 - Screenshots of the application:
 ![image](./client/src/assets/demo.png)
