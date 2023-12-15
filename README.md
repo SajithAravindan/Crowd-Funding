@@ -67,7 +67,7 @@ To install this project locally:
 
 
 - Link to the deployed application:
-https://boiling-everglades-43085-8252d97053b3.herokuapp.com/
+https://boiling-everglades-43085-8252d97053b3.herokuapp.com/signin
 
 
 ## License
