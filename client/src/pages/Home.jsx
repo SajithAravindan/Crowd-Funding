@@ -103,7 +103,7 @@ const Home = () => {
               you have found your home.
             </p>
             <p>
-              oin us in the art of turning dreams into reality, where every project has a story, and every backer is a crucial part of that narrative.
+              Join us in the art of turning dreams into reality, where every project has a story, and every backer is a crucial part of that narrative.
               From cutting-edge tech to artistic masterpieces, social causes to entrepreneurial ventures - the possibilities are endless.
             </p>
             <p>

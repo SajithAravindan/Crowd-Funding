@@ -1,7 +1,26 @@
 # new-hampshire-crowdfunding
-A website dedicated to helping those with ideas raise the money to make their business dream a reality.
 
 ## Description
+
+A website dedicated to helping those with ideas raise the money to make their business dream a reality.
+
+Our platform is more than just a crowdfunding space; its a vibrant ecosystem where creators, backers, and visionaries unite to shape the future. Whether you are an innovator with a groundbreaking project, a supporter seeking the next big thing, or a dreamer looking to be part of something extraordinary.
+
+## Table of Contents
+
+* [Motivation](#motivation) 
+  
+* [Technologies Used](#technologies-used)  
+
+* [Usage](#usage)
+
+* [Installation](#installation)
+
+* [Demo](#demo) 
+
+* [License](#license)
+
+## Motivation
 
 - As a group, we were motivated to create this project in order to improve our skills creating a full stack MERN application. For all of us, this was our first time really connecting all the pieces and it was a great opportunity to do so as a team.
 - We creating this application to work on our skills particularly with React, Node.js, Express.js, and MongoDB. I think connecting all the pieces was great for us to understand the best way to work as a team while creating the application.
@@ -13,27 +32,42 @@ A website dedicated to helping those with ideas raise the money to make their bu
 - Express.js
 - Node.js
 - MongoDB
+- Mongoose
+- @apollo/client
+- apollo-server-express
+- concurrently
+- graphQL
 - JWT
+- bcrypt
 - Vite
 - Tachyons (for CSS)
+
+## Usage
+
+As mentioned above, users can create an account, login, create project, Donate to a project and also save liked projects!
   
 ## Installation
 
 - In order to use this application, the user can simply click on the link below and they will be taken right to the application
 
+To install this project locally:
+* Start by forking this repository and clone repository to your local machine.
+* Open the project in your preffered IDE
+* Look at package.json file that specifies dependencies for this project, so be sure to run `npm    install`. This will install all the required packages. 
+* To Seed the database, run `npm run seed`
+* Invoke application with `npm run develop`
+
+
 ## Usage
 
 - Screenshots of the application:
-![image](https://github.com/mleblanc94/new-hampshire-crowdfunding/assets/60248680/d80bd7a4-b409-49a3-a620-1264921513e0)
-![image](https://github.com/mleblanc94/new-hampshire-crowdfunding/assets/60248680/a8158cd3-15c3-46e7-9dc7-830c67e62a2f)
+![image](./client/src/assets/demo.png)
+![image](./client/src/assets/demo1.png)
 
 - Link to the deployed application:
-https://new-hampshire-crowdfunding-77f5955003dc.herokuapp.com/
+https://boiling-everglades-43085-8252d97053b3.herokuapp.com/
 
-## Credits
-
-N/A
 
 ## License
 
-- Please refer to the LICENSE in the repo.
+* Please refer to the LICENSE in the repo. <a href="https://github.com/SajithAravindan/Book-Search-Engine-MERN/blob/main/LICENSE">(MIT License)</a>
