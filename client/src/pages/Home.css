@@ -34,7 +34,3 @@
     clear: left;
   }
 
-  .project-container {
-    box-sizing: border-box;
-    flex: 1 0 25%; /* 25% width for large screens, adjust as needed */
-  }

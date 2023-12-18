@@ -158,7 +158,7 @@ const CreateProject = () => {
               </div>
               <div className="tc">
                 <input
-                  className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                  className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib  br3 shadow-1"
                   type="submit"
                   value="Submit"
                 />

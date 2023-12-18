@@ -43,7 +43,7 @@ const Signin = (props) => {
 
   return (
     <div className="tc">
-      <h1 className="f2">Welcome to New Hampshire Crowdsourcing!</h1>
+      <h1 className="f2">Welcome to New Hampshire Crowdfunding!</h1>
       <div className="flex justify-center">
         <article className="br2 ba dark-gray b--black-10 mv4 w-40-l mw6 mh4 center shadow-5 bg-washed-green">
           <main className="pa4 black-80">
@@ -56,12 +56,13 @@ const Signin = (props) => {
                     Email:
                   </label>
                   <input
-                    className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                    type="text"
+                    className="pa2 input-reset ba bg-transparent hover-bg-white hover-white w-100"
+                    type="email"
                     id="email"
                     name="email"
                     value={formState.email}
                     onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="mv3">
@@ -69,17 +70,18 @@ const Signin = (props) => {
                     Password:
                   </label>
                   <input
-                    className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                    className="b pa2 input-reset ba bg-transparent hover-bg-white hover-white w-100"
                     type="password"
                     id="password"
                     name="password"
                     value={formState.password}
                     onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="tc">
                   <input
-                    className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                    className="b ph3 pv2 input-reset ba b--white bg-transparent grow pointer f6 dib br3 shadow-1"
                     type="submit"
                     value={'Login'}
                   />

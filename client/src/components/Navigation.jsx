@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Auth from '../utils/auth';
 import 'tachyons';
 import './Navigation.css';
-import  Logo  from '../assets/Logo3.png';
+import Logo from '../assets/Logo3.png';
 
 const Navigation = () => {
   const location = useLocation();
@@ -19,16 +19,13 @@ const Navigation = () => {
 
   return (
     <nav>
-      
-    
-      <ul className="flex justify-between list ma0 sans-serif f3 lh-copy pv3 links-ul">
-      <li>
-
-<img src={Logo} alt="logo"
-         className="shadow-lg p-1 mb-1 bg-white rounded" />
-</li>        
+      <ul className="flex justify-between items-center list mt2 tc f3 fw6 lh-copy pv3 links-ul">
         <li>
-          <Link to="/" className={`near-white ${isCurrentPage('/') ? 'fw8' : ''}`}>
+          <img src={Logo} alt="logo"
+            className="shadow-lg p-1 mb-0 ml-5 bg-white br3 shadow-1" />
+        </li>
+        <li>
+          <Link to="/" className={`white ${isCurrentPage('/') ? 'fw8' : ''}`}>
             Home
           </Link>
         </li>
@@ -36,18 +33,18 @@ const Navigation = () => {
           Auth.loggedIn() ? (
             <>
               <li>
-                <Link to="/create" className={`near-white ${isCurrentPage('/create') ? 'fw8' : ''}`}>
+                <Link to="/create" className={`white ${isCurrentPage('/create') ? 'fw8' : ''}`}>
                   Create
                 </Link>
               </li>
               <li>
-                <Link to="/profile" className={`near-white ${isCurrentPage('/profile') ? 'fw8' : ''}`}>
+                <Link to="/profile" className={`white ${isCurrentPage('/profile') ? 'fw8' : ''}`}>
                   Profile
                 </Link>
               </li>
               <li>
                 <div>
-                  <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                  <button onClick={logout}>
                     Logout
                   </button>
                 </div>
@@ -71,7 +68,6 @@ const Navigation = () => {
               </li>
             </>
           )}
-
       </ul>
     </nav>
   );

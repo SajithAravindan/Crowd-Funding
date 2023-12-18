@@ -1,9 +1,10 @@
 .signin-button, .signup-button {
     color: black;
     margin: 2px;
-    background-color: #9eebcf;
-    border-radius: 2px;
+    background-color: #bfe1d5;    
     cursor: pointer;
+    border-radius: 8px; /* Adjust the value as needed for the desired roundness */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the values for the shadow effect */
 }
 
 .signup-button {
@@ -12,7 +13,7 @@
 
 nav ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: 15px;
     padding: 0;
     overflow: hidden;
     background-color: #CCD5AE;
@@ -21,3 +22,4 @@ nav ul {
 a {
     text-decoration: none;
 }
+

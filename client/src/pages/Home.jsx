@@ -33,7 +33,7 @@ const Home = () => {
   const [favorites, setFavorites] = useState([]);
   const userId = AuthService.loggedIn() ? AuthService.getProfile().data._id : null;
 
-  if(!userId) { // If user is not logged in, redirect to login page (this is just a safety check)
+  if (!userId) { // If user is not logged in, redirect to login page (this is just a safety check)
     window.location.assign('/signin');
   }
   const { loading, error, data } = useQuery(GET_USER_NOT_CREATED, {
@@ -88,47 +88,54 @@ const Home = () => {
     }
   };
 
+  const divStyle = {
+    //backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("./src/assets/IMG_002.jpg")`,
+    backgroundPosition: 'center',
+    //backgroundSize: 'cover',
+    backgroundColor: 'washed-green', // Set the background color to your desired color
+  };
+
   // Stripe public key (replace with your actual Stripe public key)
   const stripePromise = loadStripe('your_stripe_public_key');
 
   return (
-    <div className="pa4">
-      <div className="flex justify-left">
-        <div className="flex flex-wrap justify-between mw10">
-          <div className="pa4 black-80 shadow-5 ma2">
-            <h1>Welcome to New Hampshire Crowd Funding!</h1>
-            <p>
-              Embark on a journey where ideas come to life and dreams find their wings.
-              At New Hampshire Crowd Funding, we believe in the power of community, passion, and the extraordinary impact that can be made when people come together.
-            </p>
-            <p>
-              Our platform is more than just a crowdfunding space; its a vibrant ecosystem where creators, backers, and visionaries unite to shape the future. Whether
-              you are an innovator with a groundbreaking project, a supporter seeking the next big thing, or a dreamer looking to be part of something extraordinary
-              you have found your home.
-            </p>
-            <p>
-              Join us in the art of turning dreams into reality, where every project has a story, and every backer is a crucial part of that narrative.
-              From cutting-edge tech to artistic masterpieces, social causes to entrepreneurial ventures - the possibilities are endless.
-            </p>
-            <p>
-              Here, we celebrate the power of collaboration, the spirit of creativity, and the profound impact that small contributions can make.
-              Together, let us build, support, and inspire. Welcome to the community where dreams are fueled, ideas are nurtured, and the extraordinary becomes the norm.
-              <br />
-              Are you ready to bring your vision to life or be part of something incredible? Dive in and explore the world of limitless possibilities.
-              <br /><br />
-              Welcome to New Hampshire Crowd Funding - Where Dreams Take Flight!
-            </p>
+    <div className="pl4 pt0 pr2">
+      <div className="flex flex-wrap justify-between mw10">
+        <div className="black-80 shadow-3 pa4" style={divStyle}>
+          <h1>Welcome to New Hampshire Crowd Funding!</h1>
+          <div className="flex flex-wrap mw10">
+            <div className="flex-grow-1">
+              <p>
+                Embark on a journey where ideas come to life and dreams find their wings.
+                At New Hampshire Crowd Funding, we believe in the power of community, passion, and the extraordinary impact that can be made when people come together.
+              </p> <p>
+                Our platform is more than just a crowdfunding space; its a vibrant ecosystem where creators, backers, and visionaries unite to shape the future. Whether
+                you are an innovator with a groundbreaking project, a supporter seeking the next big thing, or a dreamer looking to be part of something extraordinary
+                you have found your home.
+              </p> <p>
+                Join us in the art of turning dreams into reality, where every project has a story, and every backer is a crucial part of that narrative.
+                From cutting-edge tech to artistic masterpieces, social causes to entrepreneurial ventures - the possibilities are endless.
+              </p> <p>
+                Here, we celebrate the power of collaboration, the spirit of creativity, and the profound impact that small contributions can make.
+                Together, let us build, support, and inspire. Welcome to the community where dreams are fueled, ideas are nurtured, and the extraordinary becomes the norm.
+              </p> <p>
+                Are you ready to bring your vision to life or be part of something incredible? Dive in and explore the world of limitless possibilities.
+              </p> <p>
+                Welcome to New Hampshire Crowd Funding - Where Dreams Take Flight!
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <h1 className="tc">Active Projects</h1>
+      <div className="flex justify-center">
+        <h1 className="justify-center" >Active Projects</h1>
+      </div>
       <div className="flex justify-left">
-        <div className="flex flex-wrap justify-between mw10">
+        <div className="flex flex-wrap ma9 mw10  pr9">
           {projects.map((project, index) => (
             <article
               key={index}
-              className="br2 ba dark-gray b--black-10 mv4 w-100 w-40-l shadow-5 ma2"
+              className="br2 ba dark-gray b--black-10 ma4 w-100 w-40-l shadow-5 ma2"
               onClick={() => openProjectDetails(project)}
               style={{ cursor: 'pointer' }}
             >
@@ -154,7 +161,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-
       {selectedProject && (
         <Elements stripe={stripePromise}>
           {/* Wrap the ProjectDetails component with Elements provider */}
